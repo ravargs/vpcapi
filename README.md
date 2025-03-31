@@ -12,27 +12,25 @@ curl --location 'https://kwra8jqg54.execute-api.ap-south-1.amazonaws.com/dev/cre
 --header 'Authorization: Bearer $TOKEN' \
 --header 'Content-Type: text/plain' \
 --data '{
-  "VpcName": "MyTestVPC",
-  "VpcCidr": "10.0.0.0/16",
-  "Region": "ap-south-1",
-  "Subnets": [
-    {
-      "Name": "subnet-1",
-      "Cidr": "10.0.1.0/24",
-      "AvailabilityZone": "ap-south-1a"
-    },
-    {
-      "Name": "subnet-2",
-      "Cidr": "10.0.2.0/24",
-      "AvailabilityZone": "ap-south-1b"
-    },
-    {
-      "Name": "subnet-3",
-      "Cidr": "10.0.3.0/24",
-      "AvailabilityZone": "ap-south-1c"
-    }
-  ]
-}'
+    "vpcName": "MyVPC",
+    "cidrBlock": "10.0.0.0/16",
+    "subnets": [
+        {
+            "subnetName": "MySubnet1",
+            "subnetCidrBlock": "10.0.1.0/24"
+        },
+        {
+            "subnetName": "MySubnet2",
+            "subnetCidrBlock": "10.0.2.0/24"
+        },
+        {
+            "subnetName": "MySubnet3",
+            "subnetCidrBlock": "10.0.3.0/24"
+        }
+    ],
+    "idempotencyToken": "optional-unique-token"
+}
+'
 ```
 2. Get VPC details: 
    Similar to above step generate the authorization token and rn the below command to invoke the api
