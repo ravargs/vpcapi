@@ -1,0 +1,19 @@
+{
+    "vpcName": "MyVPC1",
+    "cidrBlock": "10.1.0.0/16",
+    "subnets": [
+        {
+            "subnetName": "MySubnet1",
+            "subnetCidrBlock": "10.1.1.0/24"
+        },
+        {
+            "subnetName": "MySubnet2",
+            "subnetCidrBlock": "10.1.2.0/24"
+        },
+        {
+            "subnetName": "MySubnet3",
+            "subnetCidrBlock": "10.1.3.0/24"
+        }
+    ],
+    "idempotencyToken": "xxx-yyy-124"
+}
